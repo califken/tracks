@@ -1,0 +1,13 @@
+<div class="card" *ngIf="track">
+  <div class="card-header">
+    <h3>{{ track.title }}</h3>
+  </div>
+  <div class="card-body">
+    <app-waveform [track]="track" [trackurl]="track.url" [trackkey]="track.key" [annotations]="true"
+      [refpath]="refPath"></app-waveform>
+  </div>
+
+
+</div>
+
+

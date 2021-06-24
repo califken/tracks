@@ -1,0 +1,10 @@
+<div *ngFor="let t of trackslistObs | async">
+  <div class="card">
+    <div class="card-header">
+      <h4><a style="color:#000;" [routerLink]="t.viewurl">{{ t.title }}</a></h4>
+    </div>
+    <div class="card-body">
+      <app-waveform [trackurl]="t.url" [trackkey]="t.key"></app-waveform>
+    </div>
+  </div>
+</div>

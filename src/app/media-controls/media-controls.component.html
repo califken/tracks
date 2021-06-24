@@ -1,0 +1,9 @@
+<button
+          class="playpause"
+            (click)="ws.playPause()"
+          >
+            <i class="fas fa-play btn-play" *ngIf="playstate == 'ready' || playstate == 'paused' || playstate == 'finished'"></i>
+            <i class="fas fa-pause btn-play btn-isplaying" *ngIf="playstate == 'playing'"></i>
+
+            <div class="playstate">{{ ws.playstateSubject | async }}</div>
+          </button>

@@ -1,0 +1,23 @@
+<div>
+  <div class="waveform-grid">
+    <button
+          class="playpause"
+            (click)="ws.playPause()"
+          >
+            <i class="fas fa-play btn-play" *ngIf="ws.playstate == 'ready' || ws.playstate == 'paused' || ws.playstate == 'finished'"></i>
+            <i class="fas fa-pause btn-play btn-isplaying" *ngIf="ws.playstate == 'playing'"></i>
+
+            <div class="playstate">{{ ws.playstateSubject | async }}</div>
+          </button>
+
+
+
+    <div class="waveformwrapper">
+      <div class="waveform" [id]="trackkey">
+
+      </div>
+
+      <div *ngIf="annotations" id="wave-timeline"></div>
+    </div>
+  </div>
+

@@ -1,0 +1,41 @@
+.playpause {
+  width: 100px;
+  height: 100px;
+  background: transparent;
+  font-size: 2em;
+  border: none;
+  padding: 0px;
+  border-radius: 50%;
+}
+
+.playpause i.fa-play {
+  color: #333;
+}
+
+.playpause i.btn-isplaying {
+  color: rgba(0, 0, 255, 0.725);
+}
+
+.btn-isplaying {
+  animation-name: isplaying;
+  animation-duration: 2.4s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+@keyframes isplaying {
+  from {
+    text-shadow: 0px 0px 5px #aaa;
+    color: red;
+  }
+
+  to {
+    color: blue;
+    text-shadow: 0px 20px 10px #ccc;
+  }
+}
+
+.playstate {
+  font-size: 0.3em;
+  color: #eee;
+  margin-top: -12px;
+}

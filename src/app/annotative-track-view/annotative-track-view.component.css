@@ -1,0 +1,56 @@
+.grid-container1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px 2px;
+  grid-template-areas: '. .';
+
+  font-family: 'Roboto', sans-serif;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 3fr 1fr 1fr 1fr;
+  gap: 2px 2px;
+  grid-template-areas: '. .';
+
+  font-family: 'Roboto', sans-serif;
+}
+.griddle-container {
+  display: grid;
+  grid-template-columns: 1fr 7fr;
+  gap: 2px 2px;
+  grid-template-areas: '. .';
+
+  font-family: 'Roboto', sans-serif;
+}
+.playpause {
+  font-size: 3em;
+}
+
+h2 {
+  font-family: 'Hammersmith One', sans-serif;
+  font-size: 3.5em;
+  color: #222;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.progress-bar {
+  transition: width 0s;
+}
+.btn-paused {
+  animation-name: pausedanimation;
+  animation-duration: 10s;
+
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes pausedanimation {
+  from {
+    background-color: #fff;
+    color: #000;
+  }
+  to {
+    background-color: #aaa;
+    color: navy;
+  }
+}

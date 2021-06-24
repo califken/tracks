@@ -1,0 +1,36 @@
+{{ refpath }} <h2>Comments</h2>
+<div class="card bg-dark text-white" style="max-width:320px;">
+  <div class="card-header">Add Comment</div>
+  <div class="card-body">
+    <div>
+      <label for="comment">Comment</label>
+      <textarea class="form-control" id="comment" type="text" #comment></textarea>
+    </div>
+    <button (click)="addItem(comment.value)">Add</button>
+  </div>
+</div>
+<div class="list-group">
+  <div class="list-group-item" *ngFor="let item of items | async">
+    <p class="mb-1">
+      {{ item.comment }}
+      {{ item | json }}
+    </p>
+    <div class="d-flex w-100 justify-content-between">
+      <span style="font-weight:bold;">{{ authservice.getUserDisplayName(item.authorid) }} </span>
+      <small>3 days ago</small>
+    </div>
+
+  </div>
+  <ul>
+    <li *ngFor="let item of items | async">
+      <div class="card">
+        <div class="card-header">
+          <h3>{{ item.comment }}</h3>
+        </div>
+        <div class="card-body">
+        </div>
+
+
+      </div>
+    </li>
+  </ul>

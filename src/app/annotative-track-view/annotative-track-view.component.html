@@ -1,0 +1,37 @@
+<div *ngIf="track">
+
+
+
+  <div class="card">
+    <div class="card-header">
+      <div class="griddle-container">
+        <div>
+          <h2>{{ track.title }}</h2>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div id="wave-wrapper" style="width: 100%">
+        <app-waveform [track]="track" [trackurl]="track.url" [trackkey]="track.key" [annotations]="true"
+          [refpath]="refPath"></app-waveform>
+
+      </div>
+      <div class="card-footer">
+        <app-comments [refpath]="refPath"></app-comments>
+      </div>
+    </div>
+    <div class="sidecol">
+      <ul class="list-group">
+      </ul>rr
+      <pre>
+
+    {{ ws.regions | json }}
+    </pre>
+    </div>
+  </div>
+  <pre>
+
+
+
+</pre>
+</div>
