@@ -96,7 +96,10 @@ export class WavesurferService {
     //     })
     // );
 
-    this.wave.on('play', () => this.playstateSubject.next('playing'));
+    this.wave.on('play', () => {
+      this.db.list(`plays/${trackkey}`).push(Date.now());
+      this.playstateSubject.next('playing');
+    });
 
     this.wave.on('finish', () => {
       this.wave.stop();
